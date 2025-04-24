@@ -74,7 +74,7 @@ jobs:
           auth-type: ${{ env.AUTH_TYPE }}
 
       - name: Build Docker image
-        run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }} -f ./webapp/Dockerfile .
+        run: docker build -t ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }} -f ./Dockerfile .
     
       - name: Push image to ACR
         run: docker push ${{ env.AZURE_CONTAINER_REGISTRY }}.azurecr.io/${{ env.CONTAINER_NAME }}:${{ github.sha }}
