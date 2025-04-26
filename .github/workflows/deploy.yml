@@ -1,4 +1,5 @@
 #deploy to DigitalOcean Kubernetes
+# This GitHub Actions workflow deploys a Spring Boot application to DigitalOcean Kubernetes.
 name: Deploy to DigitalOcean Kubernetes
 
 on:
